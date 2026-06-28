@@ -1,0 +1,347 @@
+/* ========================================
+   NELLY SALON - ADDITIONAL CUSTOM STYLES
+   ======================================== */
+
+/* --- Smooth Scroll --- */
+html {
+    scroll-behavior: smooth;
+}
+
+/* --- Hide default Astra page title --- */
+.ast-archive-description,
+.entry-title,
+.page .entry-header {
+    display: none !important;
+}
+
+/* --- Full width pages --- */
+.page .site-content > .ast-container {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.page #primary {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.page .entry-content {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Force single column layout on pages */
+.page #secondary,
+.page .ast-right-sidebar,
+.page .ast-left-sidebar {
+    display: none !important;
+}
+
+/* --- Compact header nav --- */
+.main-header-menu .menu-item > a {
+    padding: 0 12px !important;
+    font-size: 0.72rem !important;
+}
+
+.ast-primary-header-bar,
+.ast-header-primary-container {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+.site-title,
+.site-title a {
+    font-size: 1.4rem !important;
+}
+
+/* --- Page Header Banner --- */
+.nh-page-header {
+    background-color: var(--nh-black);
+    padding: 120px 0 80px;
+    text-align: center;
+    position: relative;
+}
+
+.nh-page-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 1px;
+    background: var(--nh-gold);
+}
+
+.nh-page-header h1 {
+    color: var(--nh-white);
+    font-family: var(--nh-font-primary);
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.nh-page-header .nh-breadcrumb {
+    color: var(--nh-gold);
+    font-family: var(--nh-font-secondary);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+/* --- About Page --- */
+.nh-about-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.nh-about-story img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.nh-about-story-content {
+    padding: 20px 0;
+}
+
+.nh-about-story-content h2 {
+    font-family: var(--nh-font-primary);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.nh-about-story-content .nh-label {
+    display: block;
+    font-family: var(--nh-font-secondary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--nh-gold);
+    margin-bottom: 12px;
+}
+
+.nh-about-story-content p {
+    color: var(--nh-grey);
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .nh-about-story {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .nh-about-story img {
+        height: 350px;
+    }
+}
+
+/* --- Stats Counter --- */
+.nh-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+    padding: 60px 0;
+    background: var(--nh-off-white);
+}
+
+.nh-stat-item h3 {
+    font-family: var(--nh-font-primary);
+    font-size: 3rem;
+    color: var(--nh-gold);
+    margin-bottom: 8px;
+}
+
+.nh-stat-item p {
+    font-family: var(--nh-font-secondary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--nh-grey);
+}
+
+@media (max-width: 768px) {
+    .nh-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+/* --- Pricing Table --- */
+.nh-pricing-list {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.nh-pricing-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--nh-light-grey);
+}
+
+.nh-pricing-item:last-child {
+    border-bottom: none;
+}
+
+.nh-pricing-item .nh-service-name {
+    font-family: var(--nh-font-primary);
+    font-size: 1.15rem;
+}
+
+.nh-pricing-item .nh-service-dots {
+    flex: 1;
+    border-bottom: 1px dotted var(--nh-light-grey);
+    margin: 0 15px;
+    height: 1px;
+}
+
+.nh-pricing-item .nh-service-price {
+    font-family: var(--nh-font-secondary);
+    font-weight: 500;
+    color: var(--nh-gold);
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+/* --- Map Section --- */
+.nh-map-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    filter: grayscale(80%);
+    transition: filter 0.5s ease;
+}
+
+.nh-map-container:hover {
+    filter: grayscale(0%);
+}
+
+.nh-map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* --- Cookie Banner Styling --- */
+.cli-bar-container {
+    font-family: var(--nh-font-secondary) !important;
+    background-color: var(--nh-black) !important;
+    border-top: 1px solid rgba(198, 163, 100, 0.3) !important;
+}
+
+.cli-bar-container .cli-bar-btn_accept_all {
+    background-color: var(--nh-gold) !important;
+    color: var(--nh-white) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-family: var(--nh-font-secondary) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    font-size: 0.75rem !important;
+}
+
+/* --- User Registration / My Account --- */
+.ur-frontend-form,
+.woocommerce-MyAccount-content {
+    font-family: var(--nh-font-secondary);
+}
+
+.woocommerce-MyAccount-navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.woocommerce-MyAccount-navigation ul li {
+    border-bottom: 1px solid var(--nh-light-grey);
+}
+
+.woocommerce-MyAccount-navigation ul li a {
+    display: block;
+    padding: 12px 15px;
+    font-family: var(--nh-font-secondary);
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--nh-dark);
+    transition: all 0.3s ease;
+}
+
+.woocommerce-MyAccount-navigation ul li.is-active a,
+.woocommerce-MyAccount-navigation ul li a:hover {
+    color: var(--nh-gold);
+    background: var(--nh-off-white);
+    padding-left: 25px;
+}
+
+/* --- Loading & Transitions --- */
+.nh-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.nh-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Selection Color --- */
+::selection {
+    background: var(--nh-gold);
+    color: var(--nh-white);
+}
+
+::-moz-selection {
+    background: var(--nh-gold);
+    color: var(--nh-white);
+}
+
+/* --- Back to Top --- */
+#nh-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: var(--nh-gold);
+    color: var(--nh-white);
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+
+#nh-back-to-top:hover {
+    background: var(--nh-black);
+}
+
+/* --- Print Styles --- */
+@media print {
+    .site-header,
+    .site-footer,
+    .nh-footer-top,
+    #nh-back-to-top,
+    #nh-preloader {
+        display: none !important;
+    }
+}

@@ -1,0 +1,7 @@
+*.zip
+mysql_data/
+mysql_logs/
+mysql_tmp/
+wordpress/wp-content/debug.log
+wordpress/wp-content/cache/
+wordpress/wp-content/upgrade/

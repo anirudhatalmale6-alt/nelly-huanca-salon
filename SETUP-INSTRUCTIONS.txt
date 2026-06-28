@@ -1,0 +1,125 @@
+================================================================
+  NELLY HUANCA - BEAUTY AND HAIR
+  WordPress Salon Website - Setup Instructions
+================================================================
+
+ADMIN CREDENTIALS:
+  URL:      http://localhost/nelly-salon/wp-admin
+  Username: admin
+  Password: NellyAdmin2026!
+
+================================================================
+OPTION 1: QUICK SETUP WITH XAMPP / MAMP / LOCAL (Recommended)
+================================================================
+
+1. Install XAMPP, MAMP, or LocalWP (https://localwp.com)
+   - LocalWP is the easiest option (just drag & drop)
+
+2. FOR LOCALWP:
+   - Create a new site called "nelly-salon"
+   - Choose "Custom" environment
+   - Select PHP 8.1+ and MySQL 8.0
+   - Once created, open the site folder
+   - Replace the "app/public" folder contents with the "wordpress" folder contents
+   - Import the database:
+     * Click "Database" tab in LocalWP
+     * Click "Open Adminer"
+     * Import the "database.sql" file
+   - Update wp-config.php with LocalWP's database credentials
+   - Visit the site!
+
+3. FOR XAMPP/MAMP:
+   a) Copy the "wordpress" folder to your web root:
+      - XAMPP: C:\xampp\htdocs\nelly-salon\
+      - MAMP: /Applications/MAMP/htdocs/nelly-salon/
+
+   b) Create a MySQL database:
+      - Open phpMyAdmin (http://localhost/phpmyadmin)
+      - Create a new database called: wp_nelly_salon
+      - Character set: utf8mb4_unicode_ci
+      - Import the "database.sql" file into this database
+
+   c) Update wp-config.php:
+      - Open wordpress/wp-config.php
+      - Change DB_NAME to: wp_nelly_salon
+      - Change DB_USER to: root (or your MySQL user)
+      - Change DB_PASSWORD to: (empty for XAMPP, or "root" for MAMP)
+      - Change DB_HOST to: localhost
+      (Remove the socket path from the current DB_HOST value)
+
+   d) Visit: http://localhost/nelly-salon/
+      Admin: http://localhost/nelly-salon/wp-admin
+
+================================================================
+OPTION 2: DEPLOY TO HOSTINGER
+================================================================
+
+1. Log into your Hostinger control panel
+2. Go to "Websites" > "Manage" > "File Manager"
+3. Upload the contents of the "wordpress" folder to public_html/
+4. Create a MySQL database via Hostinger panel
+5. Import "database.sql" into the new database
+6. Update wp-config.php with Hostinger's DB credentials
+7. Run a search-replace on the database:
+   - Change "http://localhost/nelly-salon" to "https://yourdomain.com"
+   - You can use the "Better Search Replace" plugin
+   - Or use WP-CLI: wp search-replace 'http://localhost/nelly-salon' 'https://yourdomain.com'
+
+================================================================
+WHAT'S INCLUDED
+================================================================
+
+PAGES:
+  - Home (hero, about preview, services preview, stats, testimonials, CTA)
+  - About (story, values, team, stats)
+  - Services (6 service cards with pricing, full price list)
+  - Book Now (Amelia booking system with 15 services, 3 staff)
+  - Shop (WooCommerce with 12 products in 5 categories)
+  - Gallery & Testimonials (masonry grid, 6 testimonials)
+  - Contact (info, form, Google Map, WhatsApp)
+  - My Account (WooCommerce customer area)
+  - Cart & Checkout (fully configured)
+
+PLUGINS:
+  - WooCommerce (store, cart, checkout, payments)
+  - Amelia Booking (multi-service appointments)
+  - Elementor (visual page editor)
+  - Contact Form 7 (contact form)
+  - Yoast SEO (search optimization)
+  - CookieYes (GDPR cookie consent)
+  - User Registration (client accounts)
+  - ProfilePress (profile management)
+  - Essential Addons for Elementor
+  - All-in-One WP Migration (backup/restore)
+
+THEME:
+  - Astra (parent) + Nelly Salon (custom child theme)
+  - Color palette: Black (#1a1a1a), White, Grey, Gold (#c6a364)
+  - Fonts: Cormorant Garamond (headings) + Montserrat (body)
+  - Fully responsive design
+  - Custom preloader, back-to-top button, scroll animations
+
+BOOKING STAFF:
+  - Nelly Huanca (Lead Stylist) - all hair + bridal services
+  - Carolina Rivera (Senior Colorist) - all hair services
+  - Lucia Mendez (Specialist) - skin, nails, makeup, bridal
+
+WOOCOMMERCE PRODUCTS (12):
+  - Hair Care: Shampoo, Conditioner, Argan Oil Serum
+  - Skin Care: Face Cream, Brightening Serum, Exfoliating Scrub
+  - Styling Tools: Hair Dryer, Flat Iron
+  - Nail Care: Gel Polish Set, Cuticle Oil
+  - Gift Sets: Beauty Essentials Box, Self-Care Spa Kit
+
+================================================================
+NOTES
+================================================================
+
+- All images are placeholders - replace with your real photos
+- All text is placeholder - update with your actual content
+- Update contact info (address, phone, email, WhatsApp)
+- Configure payment gateways in WooCommerce settings
+- Set up email (SMTP plugin recommended for booking confirmations)
+- Update Google Maps embed with your actual location
+
+================================================================
